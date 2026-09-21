@@ -1,19 +1,19 @@
-import { Button } from "@/components/ui/button"
+import { AboutTeaser } from "@/components/home/about-teaser"
+import { FeaturedWorks } from "@/components/home/featured-works"
+import { HomeHero } from "@/components/home/home-hero"
+import { PricingTeaser } from "@/components/home/pricing-teaser"
 
-export default function Page() {
+/**
+ * 首页
+ * 主干编排：首屏印象 → 精选作品 → 简介引导 → 合作入口，细节均下沉至各区块组件。
+ */
+export default function HomePage() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <>
+      <HomeHero />
+      <FeaturedWorks />
+      <AboutTeaser />
+      <PricingTeaser />
+    </>
   )
 }
